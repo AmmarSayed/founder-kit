@@ -46,7 +46,9 @@ Every build ships with a **run/check command** (how to see it work). No "done" w
 constitution = this file · specify/clarify = Frame + `project.md` · plan = the Spec's trade-offs / phased-MVP · analyze = the review gate · tasks = `## Tasks` · implement = Build.
 
 ## Review before shipping
-Run the Codex review; resolve all **Blocking** findings in `review.md`. For **unfamiliar/educational** content, verify every claim against `evidence.md` and its citations.
+Run Codex's **built-in** review and resolve all **Blocking** findings in `review.md`:
+`codex review --uncommitted "...vs acceptance in project.md; verdict + findings (file, requirement, fix)" | Out-File review.md`  (or `/kit-review`).
+If Codex is unavailable, review against the `review.md` structure yourself. For **unfamiliar/educational** content, verify every claim against `evidence.md` and its citations.
 
 ## Tools to reach for
 explore → `playground` · research → deep-research + NotebookLM (→ `evidence.md`) · build web/UI → `frontend-design` · pptx/xlsx → Codex `presentations`/`spreadsheets` · review → `codex review` (+ `pr-review-toolkit` for deep) · commit → `commit-commands`.
