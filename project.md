@@ -14,7 +14,7 @@ run/check: <exact command or steps to see it work>
 - plan-review (5 lenses): value+scope · feasibility · data/security · testability · maintainability → <pass / flags>
 
 ## Status
-current: · last done: · next: · blockers: · active files: · last verified:
+branch: feature/<slug> · current: · last done: · next: · blockers: · active files: · last verified:
 
 ## Tasks
 ### Backlog
