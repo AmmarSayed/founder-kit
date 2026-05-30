@@ -1,0 +1,13 @@
+# founder-kit — generated / per-project artifacts
+output/
+*.tmp
+.DS_Store
+Thumbs.db
+__pycache__/
+.venv/
+WinPython/
+node_modules/
+
+# real data is never committed (synthetic by default)
+data/real/
+*.real.*
