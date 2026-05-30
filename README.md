@@ -57,8 +57,22 @@ In Codex / Cursor / other AIs (no slash-commands), just say *"frame this…"* or
 
 `AGENTS.md` is the single source of truth. In Claude Code, `CLAUDE.md` imports it. Codex reads the project's `AGENTS.md` directly (optionally mirror to `~/.codex/AGENTS.md`). Cursor/Gemini: point their rules file at `AGENTS.md`.
 
-## Reuses installed skills
+## Skills it reuses (not bundled — they live in your AI tool)
 
-`frontend-design` (web/UI) · `playground` (explore) · Codex `presentations`/`spreadsheets` (pptx/xlsx) · `deep-research` + NotebookLM (research) · `pr-review-toolkit` (deep review) · `commit-commands` (ship). The only skill this repo *authors* is `codex-review`.
+founder-kit stays tiny on purpose: instead of shipping its own tools, it **leans on skills/plugins you've already installed** in Claude Code and Codex. This repo is just markdown + the one skill it authors (`codex-review`); every other capability below already exists in your AI tools and is invoked automatically when a step needs it.
+
+| Step in the flow | Skill / plugin used | What it does | Comes from |
+|---|---|---|---|
+| **Explore** (Frame) | `playground` | build a single-file interactive explorer to settle a layout/option → copy out a prompt | Claude plugin (Anthropic) |
+| **Research** (Heavy) | `deep-research` + **NotebookLM** | gather + verify **cited** sources into `evidence.md` | `deep-research` built-in; NotebookLM in browser |
+| **Build** — web/UI | `frontend-design` | build polished HTML/UI (your dashboards) | Claude plugin (Anthropic) |
+| **Build** — slides/sheets | Codex `presentations` / `spreadsheets` | generate `.pptx` / `.xlsx` | Codex plugins (OpenAI) |
+| **Review** | `codex review` (+ `pr-review-toolkit` for a deep pass) | independent + multi-lens review → `review.md` | Codex CLI; Claude plugin |
+| **Ship** | `commit-commands` | commit / push / open a PR | Claude plugin (Anthropic) |
+| (make a new skill) | `skill-creator` | author or optimize a skill | Claude plugin (Anthropic) |
+
+**The only skill this repo *authors* is `codex-review`** (`skills/codex-review/SKILL.md`).
+
+> ⚠️ **These skills live in your AI tools, not in this repo.** On a new machine, install them in Claude Code (`/plugin install <name>@claude-plugins-official`) and Codex — or the flow still runs on plain prompting, just without the polish. founder-kit's *durable* core (`AGENTS.md` + `project.md`) works regardless.
 
 *Spec-driven, in plain files — the "spec-kit" methodology, with no extra tooling to install.*
