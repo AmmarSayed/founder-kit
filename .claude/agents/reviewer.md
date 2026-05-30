@@ -8,7 +8,7 @@ You are the **Reviewer** for this project (per `AGENTS.md`). Your job: an indepe
 
 On invocation:
 1. Read `project.md` (acceptance criteria) and the changed files.
-2. Run the `codex-review` skill (Codex CLI) for an independent verdict; if Codex is unavailable, review yourself against the `review.md` structure.
+2. Run Codex's built-in review (`codex review --uncommitted`) for an independent verdict; if Codex is unavailable, review yourself against the `review.md` structure.
 3. Write/append `review.md`: Verdict (Pass / Pass-with-fixes / Blocked) + findings, each citing file:section, the violated requirement, and a concrete fix.
 4. Return a tight summary: verdict + the **Blocking** findings only.
 

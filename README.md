@@ -59,7 +59,7 @@ In Codex / Cursor / other AIs (no slash-commands), just say *"frame this…"* or
 
 ## Skills it reuses (not bundled — they live in your AI tool)
 
-founder-kit stays tiny on purpose: instead of shipping its own tools, it **leans on skills/plugins you've already installed** in Claude Code and Codex. This repo is just markdown + the one skill it authors (`codex-review`); every other capability below already exists in your AI tools and is invoked automatically when a step needs it.
+founder-kit stays tiny on purpose: instead of shipping its own tools, it **leans on skills/plugins you've already installed** in Claude Code and Codex. This repo is just markdown — it authors **no skills of its own**; every capability below already exists in your AI tools and is invoked automatically when a step needs it.
 
 | Step in the flow | Skill / plugin used | What it does | Comes from |
 |---|---|---|---|
@@ -71,7 +71,7 @@ founder-kit stays tiny on purpose: instead of shipping its own tools, it **leans
 | **Ship** | `commit-commands` | commit / push / open a PR | Claude plugin (Anthropic) |
 | (make a new skill) | `skill-creator` | author or optimize a skill | Claude plugin (Anthropic) |
 
-**The only skill this repo *authors* is `codex-review`** (`skills/codex-review/SKILL.md`).
+**This repo authors *no* skills** — even the review uses Codex's **built-in** `codex review`. (Project-specific skills can be added later with `skill-creator`.)
 
 > ⚠️ **These skills live in your AI tools, not in this repo.** On a new machine, install them in Claude Code (`/plugin install <name>@claude-plugins-official`) and Codex — or the flow still runs on plain prompting, just without the polish. founder-kit's *durable* core (`AGENTS.md` + `project.md`) works regardless.
 
