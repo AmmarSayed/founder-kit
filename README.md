@@ -36,6 +36,15 @@ Heavy:    Frame → Research → Decide → Prototype → Spec → Build → Rev
 - **Builder** — implements from the brief
 - **Reviewer** — Codex, independent check
 
+## Commands (optional — Claude Code shortcuts)
+
+You don't need these — **plain language works** ("frame this…", "build it", "review it with codex") in any AI. They're just one-keystroke shortcuts in Claude Code:
+
+- **`/kit-start <what you want to build>`** — **Frame** a new task (Lead hat): brainstorm, ask the one forcing question, pick Default/Heavy mode, and fill `project.md`. Stops for your GO before building.
+- **`/kit-review`** — run the independent **Codex review** of the current work → `review.md`, then report the Verdict + any Blocking findings.
+
+In Codex / Cursor / other AIs (no slash-commands), just say *"frame this…"* or *"review it with codex"* — `AGENTS.md` drives the same flow.
+
 ## Files
 
 - **`AGENTS.md`** — the rules every AI reads first (the "constitution"). **Start here.**
