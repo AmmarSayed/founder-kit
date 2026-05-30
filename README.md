@@ -15,12 +15,12 @@ cd MyProject
 claude          # or codex, or open the folder in your AI tool
 ```
 
-## The flow
+## The flow  (one flow that scales — add steps only when needed)
 
 ```
 Default:  Frame → Spec → Build → Review → Ship
 Heavy:    Frame → Research → Decide → Prototype → Spec → Build → Review → Ship
-          (use Heavy when you don't know the topic, or it's big / greenfield)
+          (same flow + a few extra steps; use it when the topic is unfamiliar, big, or greenfield)
 ```
 
 - **Frame** — brainstorm + answer one question: *"What's the cheapest way to invalidate this idea before building?"* → fill `project.md`, and start the feature branch: `git checkout -b feature/<slug>`.
@@ -52,4 +52,4 @@ Heavy:    Frame → Research → Decide → Prototype → Spec → Build → Rev
 
 `frontend-design` (web/UI) · `playground` (explore) · Codex `presentations`/`spreadsheets` (pptx/xlsx) · `deep-research` + NotebookLM (research) · `pr-review-toolkit` (deep review) · `commit-commands` (ship). The only skill this repo *authors* is `codex-review`.
 
-*Lightweight spec-driven method (the "spec-kit" methodology in plain files — no extra tooling to install).*
+*Spec-driven, in plain files — the "spec-kit" methodology, with no extra tooling to install.*
