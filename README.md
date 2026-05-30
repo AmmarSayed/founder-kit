@@ -23,12 +23,12 @@ Heavy:    Frame → Research → Decide → Prototype → Spec → Build → Rev
           (use Heavy when you don't know the topic, or it's big / greenfield)
 ```
 
-- **Frame** — brainstorm + answer one question: *"What's the cheapest way to invalidate this idea before building?"* → fill `project.md`.
+- **Frame** — brainstorm + answer one question: *"What's the cheapest way to invalidate this idea before building?"* → fill `project.md`, and start the feature branch: `git checkout -b feature/<slug>`.
 - **Research** (Heavy) — gather **cited** sources into `evidence.md` (deep research + NotebookLM). Build only from this.
 - **Spec** — in `project.md`: key trade-offs, a phased MVP, edge-cases. Proportional — brief for small work.
 - **Build** — implement; **synthetic/sample data first**; always include a run/check command.
 - **Review** — `/kit-review` (Codex) → `review.md`; fix Blocking findings.
-- **Ship** — swap in real data + push (**with your approval**).
+- **Ship** — once Review passes: **merge the feature branch → `main`** (`git merge --no-ff feature/<slug>`), swap in real data, and push (**with your approval**).
 
 ## The team (just talk — these are hats, used in sequence)
 

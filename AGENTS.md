@@ -29,6 +29,13 @@ Also: edits stay inside THIS project folder. Research/review tooling (WebSearch,
 ## Build rule
 Every build ships with a **run/check command** (how to see it work). No "done" without it.
 
+## Version control (git workflow)
+- One **git repo per project**.
+- **One branch per feature/task** — `git checkout -b feature/<slug>` *before* building.
+- Make small, working commits on that branch as you go.
+- **Merge to `main` only after Review passes** (Verdict: Pass): `git merge --no-ff feature/<slug>`, then delete the branch.
+- `git push` only with explicit approval (see Safety gates).
+
 ## The ladder (default to the lowest rung)
 1. Always-true rule → put it here in `AGENTS.md`.
 2. Reusable know-how → a **skill**.
